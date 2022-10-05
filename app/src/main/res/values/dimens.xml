@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">5dp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="marginFromTop">50dp</dimen>
+    <dimen name="fontTitle">40dp</dimen>
+    <dimen name="fontRegular">20dp</dimen>
+    <dimen name="editTextWidth">200dp</dimen>
+    <dimen name="memEditTextWidth">300dp</dimen>
+    <dimen name="memEditTextDescHeight">200dp</dimen>
+    <dimen name="spinnerHeight">40dp</dimen>
+    <dimen name="buttonWidth">100dp</dimen>
+</resources>
