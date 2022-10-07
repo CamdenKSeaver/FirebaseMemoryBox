@@ -32,7 +32,7 @@
         android:hint="Name of Memory"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/memorySpinner" />
+         app:layout_constraintTop_toBottomOf="@+id/memorySpinner" />
 
     <EditText
         android:id="@+id/descriptionMemory"
@@ -47,7 +47,6 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameOfMemory" />
-
     <Spinner
         android:id="@+id/memorySpinner"
         android:layout_width="237dp"
@@ -60,4 +59,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addMemory" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

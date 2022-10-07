@@ -19,11 +19,7 @@
         <activity
             android:name=".AddMemoryActivity"
             android:exported="false" />
-        <activity
 
-            android:name=".Memory"
-            android:exported="false"
-            tools:ignore="Instantiatable" />
         <activity
             android:name=".SignInActivity"
             android:exported="true">

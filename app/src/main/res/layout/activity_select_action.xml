@@ -13,6 +13,7 @@
         android:layout_marginTop="106dp"
         android:layout_marginEnd="137dp"
         android:text="See Memories"
+        android:onClick="showMemories"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,6 +25,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="136dp"
         android:text="Add a Memory"
+        android:onClick="addMemories"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seeMemories" />
@@ -35,6 +37,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="161dp"
         android:text="Log Out"
+        android:onClick="logOutClicked"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addMemory" />
