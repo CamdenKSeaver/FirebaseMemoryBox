@@ -160,9 +160,17 @@ public class SignInActivity extends AppCompatActivity  {
             Toast.makeText(getApplicationContext(), "Password must be at least 6 char long", Toast.LENGTH_SHORT).show();
             return false;
         } else {
+            userName = removeTrailingSpaces(userName);
             Log.i(TAG, userName + " " + password + " is set after getValues(), return true");
             return true;
         }
     }
+    private String removeTrailingSpaces(String email) {
+        String lastChar = email.substring(email.length() -1);
+        if (lastChar.equals(" "))
+            email = email.substring(0, email.length()-1);
+        return email;
+    }
+
 
 }

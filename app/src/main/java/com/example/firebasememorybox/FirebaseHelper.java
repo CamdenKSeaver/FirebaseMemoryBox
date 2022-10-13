@@ -47,12 +47,16 @@ public class FirebaseHelper {
     public final String TAG = "Denna";
     private static String uid = null;      // var will be updated for currently signed in user
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
+    private ArrayList<Memory> myMemories;
     // we don't need this yet
     // private ArrayList<Memory> myItems = new ArrayList<>();
 
 
     public FirebaseHelper() {
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        myMemories = new ArrayList<>();
     }
 
 
