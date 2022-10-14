@@ -42,6 +42,8 @@ public class SignInActivity extends AppCompatActivity  {
         passwordET = findViewById(R.id.passwordEditText);
     }
 
+
+
     /**
      * Method first checks if the input is valid.  If it meets the screening criteria from
      * getValues(), then the username (which is an email) and password are sent to the FirebaseHelper
@@ -59,6 +61,20 @@ public class SignInActivity extends AppCompatActivity  {
      *
      * @param view
      */
+public void onStart(){
+    super.onStart();
+    updateUI();
+}
+
+    public void updateUI() {
+        // if the user is already logged in, then they bypass this screen
+        Log.d(TAG, "inside updateUI: " + firebaseHelper.getmAuth().getUid());
+        if (firebaseHelper.getmAuth().getUid() != null) {
+            firebaseHelper.attachReadDataToUser();
+            Intent intent = new Intent(SignInActivity.this, SelectActionActivity.class);
+            startActivity(intent);
+        }
+    }
 
 
     public void signUpClicked(View view) {
@@ -77,6 +93,9 @@ public class SignInActivity extends AppCompatActivity  {
                                 // Sign up successful, update UI with the currently signed in user's info
                                 firebaseHelper.updateUid(firebaseHelper.getmAuth().getUid());
                                 Log.d(TAG, userName + " created and logged in");
+                                firebaseHelper.addUserToFirestore(userName,
+                                        firebaseHelper.getmAuth().getUid());
+                                firebaseHelper.attachReadDataToUser();
 
                                 // we will implement this later
                                 // updateIfLoggedIn();
@@ -111,6 +130,7 @@ public class SignInActivity extends AppCompatActivity  {
                             if (task.isSuccessful()){
                                 // Sign in success, update currently signed in user's info
                                 firebaseHelper.updateUid(firebaseHelper.getmAuth().getUid());
+                                firebaseHelper.attachReadDataToUser();
 
                                 // we will implement this later
                                 // updateIfLoggedIn();

@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nameOfMemory"
+        android:id="@+id/memoryNameEditText"
         android:layout_width="237dp"
         android:layout_height="39dp"
         android:layout_marginTop="33dp"
@@ -35,10 +35,10 @@
          app:layout_constraintTop_toBottomOf="@+id/memorySpinner" />
 
     <EditText
-        android:id="@+id/descriptionMemory"
+        android:id="@+id/memoryDescEditText"
         android:layout_width="237dp"
         android:layout_height="208dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="87dp"
         android:background="@color/background"
         android:ems="10"
@@ -46,7 +46,7 @@
         android:hint="Description"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameOfMemory" />
+        app:layout_constraintTop_toTopOf="parent" />
     <Spinner
         android:id="@+id/memorySpinner"
         android:layout_width="237dp"
@@ -59,5 +59,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addMemory" />
+
+    <Button
+        android:id="@+id/addMemoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="158dp"
+        android:text="Add Memory"
+        android:onClick="addMemoryButtonClicked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memoryDescEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

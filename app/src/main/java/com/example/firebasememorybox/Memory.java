@@ -9,11 +9,11 @@ public class Memory implements Parcelable {
     private String name;
     private int imageResourceId;
 
-    public Memory(int rating, String name, String desc, int imageResourceId) {
+    public Memory(int rating, String name, String desc) {
         this.rating = rating;
         this.name = name;
         this.desc = desc;
-        this.imageResourceId = imageResourceId;
+
     }
     public Memory() {
         rating = 0;
@@ -79,5 +79,13 @@ public class Memory implements Parcelable {
 
     public void setImageResourceId(int imageResourceId) {
         this.imageResourceId = imageResourceId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
