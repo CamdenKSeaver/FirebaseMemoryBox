@@ -14,12 +14,23 @@
         android:theme="@style/Theme.FirebaseMemoryBox"
         tools:targetApi="31">
         <activity
+            android:name=".EditMemoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewAllMemoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewAllMemoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditMemoriesActivity"
+            android:exported="false" />
+        <activity
             android:name=".SelectActionActivity"
             android:exported="false" />
         <activity
             android:name=".AddMemoryActivity"
             android:exported="false" />
-
         <activity
             android:name=".SignInActivity"
             android:exported="true">
