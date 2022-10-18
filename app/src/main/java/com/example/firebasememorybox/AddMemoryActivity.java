@@ -44,8 +44,8 @@ public class AddMemoryActivity extends AppCompatActivity implements AdapterView.
         }
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            String text = parent.getItemAtPosition(position).toString();
-            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+             spinnerSelectedText = parent.getItemAtPosition(position).toString();
+            Toast.makeText(parent.getContext(), spinnerSelectedText, Toast.LENGTH_SHORT).show();
         }
         // This method is required, even if empty, for the OnItemSelectedListener to work
         @Override

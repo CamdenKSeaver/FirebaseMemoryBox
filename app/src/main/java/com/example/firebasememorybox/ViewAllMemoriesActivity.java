@@ -52,3 +52,4 @@ public class ViewAllMemoriesActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
